@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -47,4 +48,7 @@ public class Patient extends Auditable<String>{
 
     @Column(name = "complement_adresse")
     private String complementAdresse;
+
+
+
 }

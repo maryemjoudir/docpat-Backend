@@ -48,7 +48,9 @@ public class PatientServiceImpl implements PatientService {
                 savedPatient.getNationalId(),
                 savedPatient.getCoverage(),
                 savedPatient.getAddress(),
-                savedPatient.getComplementAdresse()
+                savedPatient.getComplementAdresse(),
+                savedPatient.getDateEdition(),
+                savedPatient.getDateCreation()
         );
     }
 
@@ -70,7 +72,9 @@ public class PatientServiceImpl implements PatientService {
                     patient.getNationalId(),
                     patient.getCoverage(),
                     patient.getAddress(),
-                    patient.getComplementAdresse()
+                    patient.getComplementAdresse(),
+                    patient.getDateEdition(),
+                    patient.getDateCreation()
             );
         }
         return null;
@@ -94,7 +98,9 @@ public class PatientServiceImpl implements PatientService {
                         patient.getNationalId(),
                         patient.getCoverage(),
                         patient.getAddress(),
-                        patient.getComplementAdresse()
+                        patient.getComplementAdresse(),
+                        patient.getDateEdition(),
+                        patient.getDateCreation()
                 ))
                 .collect(Collectors.toList());
     }

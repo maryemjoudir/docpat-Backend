@@ -37,4 +37,8 @@ public class PatientDTO {
     private String address;
 
     private String complementAdresse;
+
+    private Date dateEdition;
+
+    private Date dateCreation;
 }
