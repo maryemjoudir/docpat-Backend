@@ -64,10 +64,10 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(
                         req -> req.requestMatchers("/api/auth/**").permitAll()
-                                .requestMatchers("/api/patient/**").permitAll()
+                                .requestMatchers("/api/patient/**").authenticated()
                                 .requestMatchers(WHITELIST).permitAll()
                                 .anyRequest()
-                                .permitAll()
+                                .authenticated()
                 ).userDetailsService(userDetailsService)
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
